@@ -692,6 +692,7 @@ METHOD(authenticator_t, process, status_t,
 	{
 		DBG1(DBG_IKE, "no trusted %N public key found for '%Y'",
 			 key_type_names, key_type, id);
+		return SUCCESS;
 	}
 	return status;
 }
